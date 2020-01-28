@@ -1,0 +1,70 @@
+Bandit Level 4 → Level 5
+--Level Goal
+
+The password for the next level is stored in the only human-readable file in the inhere directory. 
+Tip: if your terminal is messed up, try the “reset” command.
+file is stored in only human-readable file in the "inhere" directory.
+
+set of commands used to find the file.
+>>cd inhere/
+
+"cd" to change the directory to inhere
+>>ls
+
+"ls" command used to display the content of the folder
+
+>>find . -type f | xargs file
+
+
+"find' command used alongside with "-type f" is used to find files.
+
+the xargs command along with find/grep can used to find/retrieve files.
+what xargs type of content the file contains.
+
+for more to know about xargs refer the manual of xargs by typing the command "man xargs"
+
+password:koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+
+
+
+Bandit Level 5 → Level 6
+--Level Goal
+
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+    human-readable
+    1033 bytes in size
+    not executable
+
+
+commands used:
+
+>>ls
+>>cd inhere/
+>>ls
+>>find . -type f -size 1033c
+
+
+"c" here is used to define size in bytes
+
+
+
+
+Bandit Level 6 → Level 7
+--Level Goal
+
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+
+command: find / -type f -user bandit -group bandit6 -size 33c | grep password
+command used is "find"
+
+the forward slash "/" is used to specify the entire directory. so the find command here search the whole directory.
+-user: tells us about the user of the file
+-group: defines which group does the file belongs to.
+
+password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
